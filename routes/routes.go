@@ -1,11 +1,11 @@
 package routes
 
 import (
-	"github.com/gorilla/mux"
 	"github.com/JuanDHernandezA/torneo_crud/controllers"
+	"github.com/gorilla/mux"
 )
 
 func SetupRoutes(r *mux.Router) {
-	r.HandleFunc("/usuarios", controllers.ObtenerAdmins).Methods("GET")
-	r.HandleFunc("/usuarios", controllers.CrearAdministrador).Methods("POST")
+	r.HandleFunc("/administrador", controllers.ObtenerAdmins).Methods("GET")
+	r.HandleFunc("/administrador", controllers.CrearAdministrador).Methods("POST")
 }

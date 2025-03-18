@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gorilla/mux"
 	"github.com/JuanDHernandezA/torneo_crud/config"
 	"github.com/JuanDHernandezA/torneo_crud/routes"
+	"github.com/gorilla/mux"
 )
 
 func main() {
