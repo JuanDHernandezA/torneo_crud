@@ -13,6 +13,7 @@ func SetupRoutes(r *mux.Router) {
 
 	//equipo
 	r.HandleFunc("/equipo", controllers.ObtenerEquipos).Methods("GET")
+	r.HandleFunc("/equipo", controllers.CrearEquipo).Methods("POST")
 
 	//equipo_torneo
 	r.HandleFunc("/equipo_torneo", controllers.ObtenerEquiposTorneos).Methods("GET")
@@ -25,6 +26,7 @@ func SetupRoutes(r *mux.Router) {
 
 	//jugador
 	r.HandleFunc("/jugador", controllers.ObtenerJugadores).Methods("GET")
+	r.HandleFunc("/jugador", controllers.CrearJugador).Methods("POST")
 
 	//partido
 	r.HandleFunc("/partido", controllers.ObtenerPartidos).Methods("GET")
@@ -40,4 +42,7 @@ func SetupRoutes(r *mux.Router) {
 
 	//torneo
 	r.HandleFunc("/torneo", controllers.ObtenerTorneos).Methods("GET")
+
+	//transacciones
+	r.HandleFunc("/tr_registrar_equipo", controllers.TrRegistrarEquipo).Methods("POST")
 }
